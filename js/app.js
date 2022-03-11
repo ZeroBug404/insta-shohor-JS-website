@@ -31,7 +31,7 @@ const displayContent = (text) => {
 };
 
 const switchTab = (id) => {
-  console.log(id);
+  // console.log(id);
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
@@ -147,10 +147,12 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
+    console.log(likedPosts);
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "liked" ).appendChild(div);
     });
+    
     
 };
 
